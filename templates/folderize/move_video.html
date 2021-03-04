@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Move Video</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="video">Select Video:</label>
+        <select id="video" name="video" size="3">
+            {% for video in videos %}
+                <option value='{{video}}'>{{video}}</option>
+            {% endfor %}
+        </select>
+
+        <br>
+        <br>
+        <br>
+
+        <label for="folder">Select Folder:</label>
+        <select id="folder" name="folder" size="3">
+            {% for folder in folders %}
+                <option value='{{folder}}'>{{folder}}</option>
+            {% endfor %}
+        </select>
+
+        <br>
+        <br>
+        <br>
+        
+        <button type="submit">Move Video</button>
+    </form>
+{% endblock %}

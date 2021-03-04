@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Let's make your playlist..</h2>
+    <a href="{% url 'add_video' %}">Add Video</a>
+    <p></p>
+    <a href="{% url 'add_folder' %}">Add Folder</a>
+    <p></p>
+    <a href="{% url 'move_video' %}">Move Video</a>
+    <p></p>
+    {{videos}}
+{% endblock %}
